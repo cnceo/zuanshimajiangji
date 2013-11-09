@@ -8,7 +8,7 @@
 
 #import "WebRequest.h"
 #import "Reachability.h"
-#define PRELINK @"http://192.168.1.199/mahjongApp/Api/index.php?s=Index/"
+#define PRELINK @"http://www.ysapp.cn/mahjongApp/Api/index.php?s=Index/"
 @implementation WebRequest
 +(NSURL *)getMenuItemsRequest
 {
