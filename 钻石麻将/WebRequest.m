@@ -15,6 +15,36 @@
     NSString *url=[NSString stringWithFormat:@"%@menu_list",PRELINK];
     return [NSURL URLWithString:url];
 }
+//登录
++(NSURL *)getLoginRequest
+{
+    NSString *url=[NSString stringWithFormat:@"%@login_judge",PRELINK];
+    return [NSURL URLWithString:url];
+}
+//注册
++(NSURL *)getRegisterRequest
+{
+    NSString *url=[NSString stringWithFormat:@"%@register_judge",PRELINK];
+    return [NSURL URLWithString:url];
+}
+//手机验证
++(NSURL *)getPhoneTestRequest
+{
+    NSString *url=[NSString stringWithFormat:@"%@mobile_judge",PRELINK];
+    return [NSURL URLWithString:url];
+}
+//重设密码
++(NSURL *)getResetPasswordRequest
+{
+    NSString *url=[NSString stringWithFormat:@"%@reset_pwd",PRELINK];
+    return [NSURL URLWithString:url];
+}
+//首页大图
++(NSURL *)getMainPictureRequest
+{
+    NSString *url=[NSString stringWithFormat:@"%@home_page_ad",PRELINK];
+    return [NSURL URLWithString:url];
+}
 //判断网络是否连接
 +(BOOL) isConnectionAvailable{
     

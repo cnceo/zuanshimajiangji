@@ -13,4 +13,6 @@
 #define TEXTBLUECOLOR [UIColor colorWithRed:12/255.0 green:82/255.0 blue:170/255.0 alpha:1]
 
 #define TEXTGRAYCOLOR [UIColor colorWithRed:49/255.0 green:49/255.0 blue:49/255.0 alpha:1]
+
+#define SEP @"***"
 #endif

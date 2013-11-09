@@ -20,6 +20,7 @@
 		B45DE9DF182C996600D547B1 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DE9DE182C996600D547B1 /* FeedBackViewController.m */; };
 		B45DE9E3182CA10D00D547B1 /* PersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45DE9E2182CA10D00D547B1 /* PersonCenterViewController.m */; };
 		B45DE9E6182CA5AC00D547B1 /* buttonbg_geren.png in Resources */ = {isa = PBXBuildFile; fileRef = B45DE9E5182CA5AC00D547B1 /* buttonbg_geren.png */; };
+		B469FB93182E02E400205270 /* AsyncButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B469FB92182E02E400205270 /* AsyncButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE082E58182794200015DF97 /* 浪漫雅圆.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE082E57182794200015DF97 /* 浪漫雅圆.ttf */; };
 		CE082E5C182794C60015DF97 /* titlebar_login副本.png in Resources */ = {isa = PBXBuildFile; fileRef = CE082E5B182794C60015DF97 /* titlebar_login副本.png */; };
 		CE082E61182796110015DF97 /* WhiteNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE082E60182796110015DF97 /* WhiteNavViewController.m */; };
@@ -173,6 +174,8 @@
 		B45DE9E1182CA10D00D547B1 /* PersonCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCenterViewController.h; sourceTree = "<group>"; };
 		B45DE9E2182CA10D00D547B1 /* PersonCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCenterViewController.m; sourceTree = "<group>"; };
 		B45DE9E5182CA5AC00D547B1 /* buttonbg_geren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbg_geren.png; sourceTree = "<group>"; };
+		B469FB91182E02E400205270 /* AsyncButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncButton.h; sourceTree = "<group>"; };
+		B469FB92182E02E400205270 /* AsyncButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncButton.m; sourceTree = "<group>"; };
 		CE082E57182794200015DF97 /* 浪漫雅圆.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "浪漫雅圆.ttf"; sourceTree = "<group>"; };
 		CE082E5B182794C60015DF97 /* titlebar_login副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titlebar_login副本.png"; sourceTree = "<group>"; };
 		CE082E5F182796110015DF97 /* WhiteNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteNavViewController.h; sourceTree = "<group>"; };
@@ -590,6 +593,8 @@
 				CE784E1A1829F850002E16ED /* FullyLoaded.m */,
 				CE784E1B1829F850002E16ED /* AsyncImageView.h */,
 				CE784E1C1829F850002E16ED /* AsyncImageView.m */,
+				B469FB91182E02E400205270 /* AsyncButton.h */,
+				B469FB92182E02E400205270 /* AsyncButton.m */,
 			);
 			name = "离线下载图片";
 			sourceTree = "<group>";
@@ -1140,6 +1145,7 @@
 				B45DE9DF182C996600D547B1 /* FeedBackViewController.m in Sources */,
 				B45DE9E3182CA10D00D547B1 /* PersonCenterViewController.m in Sources */,
 				B43DF9AD182CCEE600EE5AC2 /* WebRequest.m in Sources */,
+				B469FB93182E02E400205270 /* AsyncButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

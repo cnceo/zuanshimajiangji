@@ -7,10 +7,19 @@
 //
 
 #import "MenuViewController.h"
+#import "AsyncButton.h"
 #import "WhiteNavViewController.h"
 #import "LoginViewController.h"
 #import "SearchViewController.h"
 #import "WebRequest.h"
+#import "myDefine.h"
+#import "StrengthViewController.h"
+#import "DongTaiViewController.h"
+#import "BusinessAreaViewController.h"
+#import "FeedBackViewController.h"
+#import "PersonCenterViewController.h"
+#import "CollectViewController.h"
+#import "CommonQusitionViewController.h"
 @interface MenuViewController ()
 {
     UIButton *loginButton;
@@ -101,12 +110,48 @@
 -(void)requestFinished:(ASIHTTPRequest *)request
 {
     NSString* strdata = [[NSString alloc]initWithData:request.responseData encoding:NSUTF8StringEncoding];
-    NSDictionary *dic=[strdata JSONValue];
+    NSDictionary *dic=[[[strdata JSONValue] objectForKey:@"menu_list"] objectAtIndex:0];
     NSLog(@"%@",dic);
+    NSArray *icons=[[dic objectForKey:@"icon"] componentsSeparatedByString:SEP];
+    NSArray *names=[[dic objectForKey:@"name"] componentsSeparatedByString:SEP];
+    for (int i=0; i<icons.count; i++) {
+        int n=i/4;
+        int m=i%4;
+        AsyncButton *menuButton=[[AsyncButton alloc] initWithFrame:CGRectMake(19+m*75, n*85+60, 60, 60)];
+        [menuButton addTarget:self action:@selector(menuButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:menuButton];
+        //添加背景
+        
+        [menuButton loadImage:[icons objectAtIndex:i]];
+       
+        //添加name标签
+        UILabel *lab=[[UILabel alloc] initWithFrame:CGRectMake(0, 62, 60, 15)];
+        lab.font=[UIFont fontWithName:@"ZhunYuan" size:12];
+        lab.backgroundColor=[UIColor clearColor];
+        lab.textColor=[UIColor whiteColor];
+        lab.text=[names objectAtIndex:i];
+        lab.textAlignment=NSTextAlignmentCenter;
+        [menuButton addSubview:lab];
+    }
 }
 -(void)requestFailed:(ASIHTTPRequest *)request
 {
     NSLog(@"失败");
+}
+//菜单按钮事件
+-(void)menuButtonClick:(UIButton *)button
+{
+    switch (button.tag) {
+        case 0:
+        {
+            StrengthViewController *strengthVC=[[StrengthViewController alloc] init];
+            [self presentViewController:strengthVC animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 -(void)searchButtonClick
 {

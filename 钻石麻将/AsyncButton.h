@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AsyncButton : UIButton
+#import "ASIHTTPRequest.h"
+@interface AsyncButton : UIButton<ASIHTTPRequestDelegate>{
+    NSURL * _imgURL;
+    NSDictionary * _item;
+}
+@property(nonatomic, retain) ASIHTTPRequest * request;
+@property (nonatomic, retain) NSURL *imgURL;
+@property (nonatomic, copy) NSDictionary *item;
+@property (nonatomic,assign) BOOL isCut;
+@property (nonatomic,strong) UIActivityIndicatorView *myActivityView;
+- (void) loadImage:(NSString*)imageURL;
+- (void) loadImage:(NSString*)imageURL withPlaceholdImage:(UIImage*)image;
+- (void) cancelDownload;
+- (void) setImageWithURL:(NSString *)urlString Size:(NSString *)size placeholderImage:(UIImage *)placeholder;
 
 @end
